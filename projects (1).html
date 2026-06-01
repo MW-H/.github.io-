@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>A showcase of my programming work and accomplishments</p>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="projects-carousel-container">
+            <button class="carousel-arrow carousel-arrow-left" onclick="previousProject()">‹</button>
+            
+            <div class="projects-carousel">
+                <div class="project-card active">
+                    <h3>Project 1: Portal Game</h3>
+                    <p class="tech">Java</p>
+                    <p class="description">A 2D randomly generated platformer where the user uses portals to move around through the stage.</p>
+                    <div style="display: flex; justify-content: center; width: 100%;">
+                        <iframe width="600" height="400" src="https://academy.cs.cmu.edu/sharing/coralGoldfish016624/embed"></iframe>
+                    </div>
+                    <h4>Challenges & Lessons:</h4>
+                    <p>The biggest challenge with this project was the collisions of the player and the world. It was really hard to make the portals work right and not break everything.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 2: To-Do List Application</h3>
+                    <p class="tech">JavaScript / HTML / CSS</p>
+                    <p class="description">A functional web-based to-do list app with add, delete, and mark-complete features with local storage persistence.</p>
+                    <div style="display: flex; justify-content: center; width: 100%;">
+                        <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/oliveLobster9516/embed"></iframe>
+                    </div>
+                    <h4>Challenges & Lessons:</h4>
+                    <p>Building this project helped me understand DOM manipulation and state management. I learned how to use local storage to persist data across browser sessions.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 3: Data Analysis Script</h3>
+                    <p class="tech">Python / Pandas</p>
+                    <p class="description">A Python script that analyzes CSV datasets and generates statistical summaries and visualizations.</p>
+                    <div style="display: flex; justify-content: center; width: 100%;">
+                        <iframe width="600" height="400" src=""></iframe>
+                    </div>
+                    <h4>Challenges & Lessons:</h4>
+                    <p>Working with data libraries expanded my understanding of code libraries and their importance. I learned how to handle large datasets efficiently and present information visually.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 4: Personal Portfolio Website</h3>
+                    <p class="tech">HTML / CSS / JavaScript</p>
+                    <p class="description">This very portfolio! A responsive, professional website showcasing my projects, skills, and experience.</p>
+                    <div style="display: flex; justify-content: center; width: 100%;">
+                        <iframe width="600" height="400" src=""></iframe>
+                    </div>
+                    <h4>Challenges & Lessons:</h4>
+                    <p>Creating this portfolio reinforced the importance of user experience and clean code. I learned how version control with Git and GitHub makes collaboration and project management seamless.</p>
+                </div>
+            </div>
+
+            <button class="carousel-arrow carousel-arrow-right" onclick="nextProject()">›</button>
+        </div>
+        
+        <div class="carousel-indicators">
+            <span class="indicator active" onclick="goToProject(0)"></span>
+            <span class="indicator" onclick="goToProject(1)"></span>
+            <span class="indicator" onclick="goToProject(2)"></span>
+            <span class="indicator" onclick="goToProject(3)"></span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Makko Wankiiri-Hale Computer Science Portfolio. All rights reserved.</p>
+            <p>Built with HTML, CSS, and JavaScript | Hosted on GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentProject = 0;
+        const totalProjects = 4;
+
+        function showProject(index) {
+            const cards = document.querySelectorAll('.project-card');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            // Wrap around
+            if (index >= totalProjects) {
+                currentProject = 0;
+            } else if (index < 0) {
+                currentProject = totalProjects - 1;
+            } else {
+                currentProject = index;
+            }
+            
+            // Hide all cards
+            cards.forEach(card => card.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Show current card
+            cards[currentProject].classList.add('active');
+            indicators[currentProject].classList.add('active');
+        }
+
+        function nextProject() {
+            showProject(currentProject + 1);
+        }
+
+        function previousProject() {
+            showProject(currentProject - 1);
+        }
+
+        function goToProject(index) {
+            showProject(index);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextProject();
+            if (e.key === 'ArrowLeft') previousProject();
+        });
+    </script>
+</body>
+</html>
