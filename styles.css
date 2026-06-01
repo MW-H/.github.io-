@@ -230,7 +230,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
     margin-bottom: 3rem;
     position: relative;
     width: 100%;
@@ -238,23 +238,23 @@ body {
 
 .projects-carousel {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 380px;
     perspective: 1200px;
 }
 
 .project-card {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 380px;
     background-color: var(--white);
     border: 2px solid var(--accent-color);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     opacity: 0;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transform: translateX(30px) translateY(30px) rotateY(-15deg) rotateZ(5deg) scale(0.8);
+    transform: translateX(40px) translateY(40px) rotateY(-15deg) rotateZ(5deg) scale(0.8);
     pointer-events: none;
     overflow-y: auto;
     top: 0;
@@ -268,17 +268,17 @@ body {
 
 .project-card:nth-child(2) {
     z-index: 30;
-    transform: translateX(15px) translateY(15px) rotateY(-10deg) rotateZ(3deg) scale(0.85);
+    transform: translateX(20px) translateY(20px) rotateY(-10deg) rotateZ(3deg) scale(0.85);
 }
 
 .project-card:nth-child(3) {
     z-index: 20;
-    transform: translateX(10px) translateY(10px) rotateY(-5deg) rotateZ(2deg) scale(0.90);
+    transform: translateX(13px) translateY(13px) rotateY(-5deg) rotateZ(2deg) scale(0.90);
 }
 
 .project-card:nth-child(4) {
     z-index: 10;
-    transform: translateX(5px) translateY(5px) rotateY(0deg) rotateZ(1deg) scale(0.95);
+    transform: translateX(7px) translateY(7px) rotateY(0deg) rotateZ(1deg) scale(0.95);
 }
 
 .project-card.active {
@@ -289,57 +289,57 @@ body {
 }
 
 .project-card.active ~ .project-card {
-    transform: translateX(30px) translateY(30px) rotateY(-15deg) rotateZ(5deg) scale(0.8);
+    transform: translateX(40px) translateY(40px) rotateY(-15deg) rotateZ(5deg) scale(0.8);
 }
 
 .project-card h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .tech {
     display: inline-block;
     background-color: var(--accent-color);
     color: var(--white);
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: 15px;
-    font-size: 0.75rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
     font-weight: 600;
 }
 
 .project-card .description {
     color: #666;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+    font-size: 0.95rem;
 }
 
 .project-card h4 {
     color: var(--secondary-color);
-    margin-top: 0.5rem;
-    margin-bottom: 0.3rem;
-    font-size: 0.95rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
 }
 
 .project-card ul {
-    margin-left: 1rem;
+    margin-left: 1.2rem;
     color: #555;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
 
 .project-card li {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
 }
 
 /* Carousel Arrows */
 .carousel-arrow {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: var(--primary-color);
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s;
@@ -351,11 +351,13 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 137, 123, 0.3);
 }
 
 .carousel-arrow:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-50%) scale(1.1);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 6px 16px rgba(0, 137, 123, 0.5);
 }
 
 .carousel-arrow:active {
@@ -363,24 +365,24 @@ body {
 }
 
 .carousel-arrow-left {
-    left: -80px;
+    left: -110px;
 }
 
 .carousel-arrow-right {
-    right: -80px;
+    right: -110px;
 }
 
 /* Carousel Indicators */
 .carousel-indicators {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.2rem;
     margin-top: 2rem;
 }
 
 .indicator {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -390,7 +392,7 @@ body {
 
 .indicator.active {
     background-color: var(--accent-color);
-    transform: scale(1.3);
+    transform: scale(1.4);
 }
 
 .indicator:hover {
@@ -586,13 +588,13 @@ footer p {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .carousel-arrow-left {
-        left: -60px;
+        left: -90px;
     }
 
     .carousel-arrow-right {
-        right: -60px;
+        right: -90px;
     }
 }
 
@@ -615,21 +617,32 @@ footer p {
     }
 
     .projects-carousel-container {
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
-    .carousel-arrow-left {
-        left: -50px;
+    .projects-carousel {
+        width: 320px;
+        height: 320px;
     }
 
-    .carousel-arrow-right {
-        right: -50px;
+    .project-card {
+        width: 320px;
+        height: 320px;
+        padding: 1.5rem;
     }
 
     .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+
+    .carousel-arrow-left {
+        left: -70px;
+    }
+
+    .carousel-arrow-right {
+        right: -70px;
     }
 
     .features {
@@ -661,27 +674,31 @@ footer p {
     }
 
     .projects-carousel {
-        width: 250px;
-        height: 250px;
+        width: 260px;
+        height: 260px;
     }
 
     .project-card {
-        width: 250px;
-        height: 250px;
+        width: 260px;
+        height: 260px;
         padding: 1rem;
     }
 
+    .project-card h3 {
+        font-size: 1.1rem;
+    }
+
     .carousel-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
         position: static;
         margin: 0 0.5rem;
     }
 
     .projects-carousel-container {
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.5rem;
         justify-content: center;
     }
 
