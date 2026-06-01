@@ -238,15 +238,15 @@ body {
 
 .projects-carousel {
     position: relative;
-    width: 580px;
-    height: 580px;
+    width: 680px;
+    height: 680px;
     perspective: 1200px;
 }
 
 .project-card {
     position: absolute;
-    width: 580px;
-    height: 580px;
+    width: 680px;
+    height: 680px;
     background-color: var(--white);
     border: 2px solid var(--accent-color);
     border-radius: 12px;
@@ -254,7 +254,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     opacity: 0;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transform: translateX(50px) translateY(50px) rotateY(-15deg) rotateZ(5deg) scale(0.8);
+    transform: translateX(60px) translateY(60px) rotateY(-15deg) rotateZ(5deg) scale(0.8);
     pointer-events: none;
     overflow-y: auto;
     top: 0;
@@ -268,17 +268,17 @@ body {
 
 .project-card:nth-child(2) {
     z-index: 30;
-    transform: translateX(25px) translateY(25px) rotateY(-10deg) rotateZ(3deg) scale(0.85);
+    transform: translateX(30px) translateY(30px) rotateY(-10deg) rotateZ(3deg) scale(0.85);
 }
 
 .project-card:nth-child(3) {
     z-index: 20;
-    transform: translateX(17px) translateY(17px) rotateY(-5deg) rotateZ(2deg) scale(0.90);
+    transform: translateX(20px) translateY(20px) rotateY(-5deg) rotateZ(2deg) scale(0.90);
 }
 
 .project-card:nth-child(4) {
     z-index: 10;
-    transform: translateX(8px) translateY(8px) rotateY(0deg) rotateZ(1deg) scale(0.95);
+    transform: translateX(10px) translateY(10px) rotateY(0deg) rotateZ(1deg) scale(0.95);
 }
 
 .project-card.active {
@@ -289,7 +289,7 @@ body {
 }
 
 .project-card.active ~ .project-card {
-    transform: translateX(50px) translateY(50px) rotateY(-15deg) rotateZ(5deg) scale(0.8);
+    transform: translateX(60px) translateY(60px) rotateY(-15deg) rotateZ(5deg) scale(0.8);
 }
 
 .project-card h3 {
@@ -330,6 +330,14 @@ body {
 
 .project-card li {
     margin-bottom: 0.4rem;
+}
+
+/* Project 1 Iframe Styling */
+.project-card:nth-child(1) iframe {
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 /* Carousel Arrows */
@@ -625,13 +633,13 @@ footer p {
     }
 
     .projects-carousel {
-        width: 450px;
-        height: 450px;
+        width: 520px;
+        height: 520px;
     }
 
     .project-card {
-        width: 450px;
-        height: 450px;
+        width: 520px;
+        height: 520px;
         padding: 2rem;
     }
 
@@ -678,13 +686,13 @@ footer p {
     }
 
     .projects-carousel {
-        width: 300px;
-        height: 300px;
+        width: 340px;
+        height: 340px;
     }
 
     .project-card {
-        width: 300px;
-        height: 300px;
+        width: 340px;
+        height: 340px;
         padding: 1.5rem;
     }
 
