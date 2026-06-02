@@ -37,7 +37,9 @@
                     <p class="tech">Python</p>
                     <p class="description">A 2D randomly generated platformer where the user uses portals to move around through the stage.</p>
                     <div style="display: flex; justify-content: center; width: 100%;">
-                        <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/coralGoldfish016624/embed"></iframe>
+                        <iframe width="410" height="460"
+                           src="https://academy.cs.cmu.edu/sharing/coralGoldfish016624/embed"> 
+                         </iframe>
                     </div>
                     <h4>Challenges & Lessons:</h4>
                     <p>The biggest challenge with this project was the collisions of the player and the world. It was really hard to make the portals work right and not break everything.</p>
@@ -48,7 +50,9 @@
                     <p class="tech">Python</p>
                     <p class="description">A 2D endless shooting game where the enemies get faster over time.</p>
                     <div style="display: flex; justify-content: center; width: 100%;">
-                        <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/oliveLobster9516/embed"></iframe>
+                        <iframe width="410" height="460"
+                           src="https://academy.cs.cmu.edu/sharing/oliveLobster9516/embed"> 
+                         </iframe>
                     </div>
                     <h4>Challenges & Lessons:</h4>
                     <p>It was really hard finding a fun, satisfying, and unique way to have the enemies move.</p>
@@ -59,7 +63,9 @@
                     <p class="tech">Python</p>
                     <p class="description">A Python script that analyzes CSV datasets and generates statistical summaries and visualizations.</p>
                     <div style="display: flex; justify-content: center; width: 100%;">
-                        <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/goldenrodSpider9820/embed"></iframe>
+                        <iframe width="410" height="460"
+                           src="https://academy.cs.cmu.edu/sharing/goldenrodSpider9820/embed"> 
+                         </iframe>
                     </div>
                     <h4>Challenges & Lessons:</h4>
                     <p>Working with data libraries expanded my understanding of code libraries and their importance. I learned how to handle large datasets efficiently and present information visually.</p>
@@ -100,7 +106,6 @@
             const cards = document.querySelectorAll('.project-card');
             const indicators = document.querySelectorAll('.indicator');
             
-            // Wrap around
             if (index >= totalProjects) {
                 currentProject = 0;
             } else if (index < 0) {
@@ -109,11 +114,9 @@
                 currentProject = index;
             }
             
-            // Hide all cards
             cards.forEach(card => card.classList.remove('active'));
             indicators.forEach(indicator => indicator.classList.remove('active'));
             
-            // Show current card
             cards[currentProject].classList.add('active');
             indicators[currentProject].classList.add('active');
         }
@@ -130,7 +133,6 @@
             showProject(index);
         }
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight') nextProject();
             if (e.key === 'ArrowLeft') previousProject();
